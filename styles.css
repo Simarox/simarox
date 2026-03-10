@@ -1,0 +1,158 @@
+/* styles.css */
+body {
+    font-family: 'Georgia', serif; /* More elegant, sensual font */
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a; /* Dark, moody background for sensuality */
+    color: #f0e6e6; /* Soft light pinkish text for allure */
+}
+header {
+    background-color: rgba(0, 0, 0, 0.8); /* Semi-transparent black for mystery */
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+nav ul li {
+    margin: 0 15px;
+}
+nav ul li a {
+    text-decoration: none;
+    color: #ffb3c6; /* Soft pink for links */
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+nav ul li a:hover {
+    color: #ff69b4; /* Hotter pink on hover */
+}
+#hero {
+    position: relative;
+    height: 60vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    background: linear-gradient(to bottom, #330000, #000000); /* Sensual red-to-black gradient */
+}
+#slideshow {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+.slide {
+    min-width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7); /* Dimmed for a mysterious, sensual vibe */
+    transition: filter 0.3s ease;
+}
+.slide:hover {
+    filter: brightness(0.9); /* Brighten on hover if interactive */
+}
+#hero-content {
+    position: relative;
+    z-index: 1;
+    padding: 20px;
+    background: rgba(51, 0, 0, 0.6); /* Deep red overlay */
+    border-radius: 15px; /* Softer, curved edges */
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.3); /* Pink glow for allure */
+}
+#hero h1 {
+    font-size: 2.5em;
+    margin: 0;
+    font-family: 'Playfair Display', serif; /* Elegant, cursive-like font */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+#hero p {
+    font-size: 1.2em;
+    font-style: italic; /* Italic for a seductive touch */
+}
+section {
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: rgba(26, 26, 26, 0.9); /* Semi-transparent dark sections */
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.2); /* Subtle pink shadow */
+}
+#intro {
+    text-align: center;
+}
+#intro h2 {
+    font-family: 'Playfair Display', serif;
+    color: #ff69b4; /* Pink headings */
+}
+#testimonials {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+.testimonial {
+    background: rgba(51, 0, 0, 0.7); /* Deep red card background */
+    padding: 20px;
+    border-radius: 15px; /* Curved for softness */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    max-width: 300px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.testimonial:hover {
+    transform: scale(1.05); /* Slight zoom on hover for interaction */
+    box-shadow: 0 0 20px rgba(255, 105, 180, 0.5); /* Glowing pink shadow */
+}
+#cta {
+    text-align: center;
+}
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    background-color: #ff69b4; /* Hot pink buttons */
+    color: #1a1a1a;
+    text-decoration: none;
+    border-radius: 20px; /* Pill-shaped for sensuality */
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+.btn:hover {
+    background-color: #ffb3c6; /* Lighter pink on hover */
+    transform: translateY(-3px); /* Lift effect */
+}
+footer {
+    background: #330000; /* Deep red footer */
+    color: #f0e6e6;
+    text-align: center;
+    padding: 20px;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.5);
+}
+@media (max-width: 768px) {
+    #hero h1 {
+        font-size: 2em;
+    }
+    #hero p {
+        font-size: 1em;
+    }
+    nav ul {
+        flex-direction: column;
+    }
+    .testimonial {
+        max-width: 100%;
+    }
+}

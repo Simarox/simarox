@@ -1,0 +1,201 @@
+<!-- booking.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking - cutegemini Companionship World</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header with Navigation -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Me</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="#">Booking</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Booking Hero Section -->
+    <section id="hero" style="height: 40vh;">
+        <div id="hero-content">
+            <h1>Book Your Experience</h1>
+            <p>Secure your time with cutegemini for an unforgettable companionship adventure. All arrangements are handled discreetly and professionally.</p>
+        </div>
+    </section>
+
+    <!-- Booking Introduction -->
+    <section id="intro">
+        <h2>Reservation Request</h2>
+        <p>our booking process is simple, secure, and straight foward. Fill out the form below to request a reservation. Provide at least one contact method (email, phone (imessage), signal, telegram, or WhatsApp). A confirmation will be sent to discuss details, screening, and offline arrangements. No deposits required—payments are handled in person or via agreed methods upon confirmation. For privacy, all communications are confidential.</p>
+        <p><strong>Important:</strong> Bookings must be at least 30 minutes from now. References or light screening may be required for safety. Services are for consenting adults only.</p>
+    </section>
+
+    <!-- Booking Form Section -->
+    <section id="form" style="max-width: 600px; margin: 0 auto;">
+        <form id="bookingForm" action="https://formspree.io/f/yourformid" method="POST" novalidate> <!-- Replace with actual form handler like Formspree, or use JS for WhatsApp/Email -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" required minlength="2" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ff69b4;">
+            <span class="error" id="nameError"></span>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ff69b4;">
+            <span class="error" id="emailError"></span>
+
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ff69b4;">
+            <span class="error" id="phoneError"></span>
+
+            <label for="whatsapp">WhatsApp Number (if different):</label>
+            <input type="tel" id="whatsapp" name="whatsapp" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="Format: 123-456-7890" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ff69b4;">
+            <span class="error" id="whatsappError"></span>
+
+            <span class="error" id="contactError"></span> <!-- For at least one contact method -->
+
+            <label for="date">Preferred Date and Time:</label>
+            <input type="datetime-local" id="date" name="date" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ff69b4;">
+            <span class="error" id="dateError"></span>
+
+            <label for="service">Preferred Service/Package:</label>
+            <select id="service" name="service" required style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ff69b4;">
+                <option value="">Select an option</option>
+                <option value="quick-outing">Quick Outing (1 Hour)</option>
+                <option value="dinner-date">Dinner Date (2-3 Hours)</option>
+                <option value="gfe">Girlfriend Experience (4-6 Hours)</option>
+                <option value="overnight">Overnight Stay (8-12 Hours)</option>
+                <option value="weekend">Weekend Adventure (2 Days)</option>
+                <option value="travel">Travel Companionship (Per Day)</option>
+                <option value="intimate">Intimate Service (Specify in Message)</option>
+                <option value="digital">Digital Content</option>
+            </select>
+            <span class="error" id="serviceError"></span>
+
+            <label for="message">Additional Preferences or Message:</label>
+            <textarea id="message" name="message" rows="5" style="width: 100%; padding: 10px; margin-bottom: 15px; border-radius: 5px; border: 1px solid #ff69b4;">Signify any other means for communication</textarea>
+
+            <input type="submit" value="Submit Reservation Request" class="btn" style="width: 100%;">
+        </form>
+    </section>
+
+    <!-- Additional Info Section -->
+    <section id="testimonials" style="flex-direction: column; align-items: center;">
+        <h2>Booking Policies</h2>
+        <div class="testimonial" style="max-width: 600px;">
+            <p><strong>Confirmation:</strong> We'll contact you within 24 hours to confirm availability and discuss details.</p>
+        </div>
+        <div class="testimonial" style="max-width: 600px;">
+            <p><strong>Screening:</strong> For safety, provide references if requested. All info is kept private.</p>
+        </div>
+        <div class="testimonial" style="max-width: 600px;">
+            <p><strong>Cancellations:</strong> Notify at least 24 hours in advance to avoid no-show fees.</p>
+        </div>
+        <div class="testimonial" style="max-width: 600px;">
+            <p><strong>Payments:</strong> Ensure booking and reservations has been made.</p>
+        </div>
+    </section>
+
+    <!-- Call-to-Action Alternatives -->
+    <section id="cta">
+        <h2>Prefer Direct Contact?</h2>
+        <a href="https://wa.me/16312786244" class="btn">Message on WhatsApp</a> <!-- Replace with actual WhatsApp link -->
+        <a href="mailto:simarolove@icloud.com" class="btn">Email Me</a> <!-- Replace with actual email -->
+        <a href="tel:+16312786244" class="btn">signal</a> <!-- Replace with actual phone -->
+    </section>
+
+    <!-- Footer with Disclaimer -->
+    <footer>
+        <p>All fees are for time and companionship only. Anything else that may occur is a matter of personal choice between consenting adults. Services comply with local laws.</p>
+        <p>&copy; 2026 Woesenpai. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Form Validation -->
+    <script>
+        document.getElementById('bookingForm').addEventListener('submit', function(event) {
+            let isValid = true;
+            const errors = document.querySelectorAll('.error');
+            errors.forEach(error => error.textContent = '');
+
+            // Name validation
+            const name = document.getElementById('name');
+            if (!name.value.trim()) {
+                document.getElementById('nameError').textContent = 'Name is required.';
+                isValid = false;
+            } else if (name.value.trim().length < 2) {
+                document.getElementById('nameError').textContent = 'Name must be at least 2 characters.';
+                isValid = false;
+            }
+
+            // Email validation (optional, but if provided, check format)
+            const email = document.getElementById('email');
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (email.value && !emailRegex.test(email.value)) {
+                document.getElementById('emailError').textContent = 'Invalid email format.';
+                isValid = false;
+            }
+
+            // Phone validation (optional, format check)
+            const phone = document.getElementById('phone');
+            const phoneRegex = /^\d{3}-\d{3}-\d{4}$/;
+            if (phone.value && !phoneRegex.test(phone.value)) {
+                document.getElementById('phoneError').textContent = 'Invalid phone format (123-456-7890).';
+                isValid = false;
+            }
+
+            // WhatsApp validation (optional, format check)
+            const whatsapp = document.getElementById('whatsapp');
+            if (whatsapp.value && !phoneRegex.test(whatsapp.value)) {
+                document.getElementById('whatsappError').textContent = 'Invalid WhatsApp format (123-456-7890).';
+                isValid = false;
+            }
+
+            // At least one contact method
+            if (!email.value && !phone.value && !whatsapp.value) {
+                document.getElementById('contactError').textContent = 'At least one contact method (email, phone, or WhatsApp) is required.';
+                isValid = false;
+            }
+
+            // Date validation (required, future date at least 30 min from now)
+            const date = document.getElementById('date');
+            if (!date.value) {
+                document.getElementById('dateError').textContent = 'Date and time are required.';
+                isValid = false;
+            } else {
+                const selectedDate = new Date(date.value);
+                const now = new Date();
+                const minTime = new Date(now.getTime() + 30 * 60000); // 30 minutes from now
+                if (selectedDate < minTime) {
+                    document.getElementById('dateError').textContent = 'Booking must be at least 30 minutes from now.';
+                    isValid = false;
+                }
+            }
+
+            // Service validation
+            const service = document.getElementById('service');
+            if (!service.value) {
+                document.getElementById('serviceError').textContent = 'Please select a service.';
+                isValid = false;
+            }
+
+            if (!isValid) {
+                event.preventDefault();
+            }
+        });
+    </script>
+
+    <style>
+        .error {
+            color: red;
+            font-size: 0.9em;
+            display: block;
+            margin-bottom: 10px;
+        }
+    </style>
+
+</body>
+</html>
